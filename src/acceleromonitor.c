@@ -75,7 +75,7 @@ static void click_handler_select(ClickRecognizerRef recognizer, void *context) {
   if (running) {
   // should process events - 5 times a second
     accel_service_set_sampling_rate(ACCEL_SAMPLING_10HZ);
-    accel_data_service_subscribe(0, NULL);
+    accel_data_service_subscribe(0, handle_accel);
     layer_set_hidden((Layer *)text_layer, true);
     layer_set_hidden((Layer *)speed_up_layer, true);
     layer_set_hidden((Layer *)speed_down_layer, true);
@@ -105,6 +105,10 @@ static void click_config_provider(void *context) {
   window_single_click_subscribe(BUTTON_ID_UP, click_handler_up);
   window_single_click_subscribe(BUTTON_ID_SELECT, click_handler_select);
   window_single_click_subscribe(BUTTON_ID_DOWN, click_handler_down);
+}
+
+static void handle_accel(AccelData *accel_data, uint32_t num_samples) {
+  // nothing
 }
 
 static void window_load(Window *window) {
