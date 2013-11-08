@@ -127,7 +127,7 @@ static void window_load(Window *window) {
   layer_add_child(window_layer, text_layer_get_layer(speed_up_layer));
 
   speed_down_layer = text_layer_create((GRect) { .origin = { 0, bounds.size.h - 20 }, .size = { bounds.size.w, 20 } });
-  text_layer_set_text(speed_down_layer, "speed up --->");
+  text_layer_set_text(speed_down_layer, "speed down --->");
   text_layer_set_text_alignment(speed_down_layer, GTextAlignmentRight);
   layer_add_child(window_layer, text_layer_get_layer(speed_down_layer));
 
