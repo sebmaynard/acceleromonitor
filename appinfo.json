@@ -1,0 +1,17 @@
+{
+  "uuid": "7c7ddba0-0b33-43b0-8e77-1a34b72723e6",
+  "shortName": "acceleromonitor",
+  "longName": "Acceleromonitor by Seb Maynard",
+  "companyName": "seb.so",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
