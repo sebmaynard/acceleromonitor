@@ -1,8 +1,6 @@
 
 .PHONY: build install all local remote
 
-.PHONE = 192.168.42.129
-
 all: build
 
 build: 
@@ -11,7 +9,7 @@ build:
 local: install logs
 
 install: build
-	pebble install --phone $(.PHONE)
+	pebble install
 
 logs:
-	pebble logs --phone $(.PHONE)
+	pebble logs
