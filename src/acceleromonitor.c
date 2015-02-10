@@ -55,7 +55,7 @@ static void graph_layer_update_callback(Layer *me, GContext *ctx) {
 static void timer_callback() {
   if (!running) return;
 
-  AccelData accel = {0, 0, 0};
+  AccelData accel = {false, 0, 0, 0, 0};
 
   accel_service_peek(&accel);
   
@@ -155,7 +155,7 @@ static void init(void) {
   window_stack_push(window, animated);
 
   for (int i=0; i<HISTORY_MAX; ++i) {
-    AccelData pt = {0, 0, 0};
+    AccelData pt = {false, 0, 0, 0, 0};
     history[i] = pt;
   }
 
