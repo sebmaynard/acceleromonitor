@@ -4,7 +4,7 @@
   "longName": "Acceleromonitor by Seb Maynard",
   "companyName": "seb.so",
   "versionCode": 102,
-  "versionLabel": "1.02",
+  "versionLabel": "1.03",
   "watchapp": {
     "watchface": false
   },
